@@ -23,6 +23,11 @@
         width: 100%;
         height: 100%;
     }
+    .custom-hotspot {
+        height: 50px;
+        width: 50px;
+        background: "/image/pic01.jpg";
+    }
     </style>
 </head>
 <body>
@@ -42,8 +47,9 @@ pannellum.viewer('panorama', {
                 {
                     "pitch": 0,
                     "yaw": 0,
-                    "type": "scene",
-                    "text": "Test",
+                    "cssClass": "custom-hotspot",
+                    "createTooltipFunc": hotspot,
+                    "createTooltipArgs": "Art Museum Drive"
                     "sceneId": "spawn2"
                 }
             ]
