@@ -30,8 +30,29 @@
 <div id="panorama"></div>
 <script>
 pannellum.viewer('panorama', {
-    "type": "equirectangular",
-    "panorama": "/images/test/spawn4.png"
+    "default": {
+        "firstScene": "spawn",
+        "scenefadeDuration": 1000
+    },
+    "scenes": {
+        "spawn": {
+            "type": "equirectangular",
+            "panorama": "/images/test/spawn4.png",
+            "hotSpots": [
+                {
+                    "pitch": 0,
+                    "yaw": 0,
+                    "type": "scene",
+                    "text": "Test",
+                    "sceneId": "spawn2"
+                }
+            ]
+        },
+        "spawn2": {
+            "type": "equirectangular",
+            "panorama": "/images/test/spawn.png"
+        }
+    }
 });
 </script>
 
