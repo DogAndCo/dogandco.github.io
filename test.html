@@ -24,9 +24,14 @@
         height: 100%;
     }
     .custom-hotspot {
-        height: 500px;
-        width: 500px;
+        height: 50px;
+        width: 50px;
         background: url("../images/pic01.jpg") no-repeat;
+    }
+    .back {
+        height: 50px;
+        width: 50px;
+        background: url("../images/tour/back.png") no-repeat;
     }
     .tourstart {
         height: 350px;
@@ -105,6 +110,15 @@ viewer = pannellum.viewer('panorama', ﻿{
                     "createTooltipFunc": hotspot,
                     "createTooltipArgs": "Click to Continue.",
                     "sceneId": "spawn2",
+                    "scale" : "false",
+                },
+                {
+                    "pitch": 0,
+                    "yaw": 0,
+                    "cssClass": "back",
+                    "createTooltipFunc": hotspot,
+                    "createTooltipArgs": "Back.",
+                    "sceneId": "spawn",
                     "scale" : "false",
                 },
             ]
