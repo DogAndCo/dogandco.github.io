@@ -64,32 +64,29 @@
 <script>
 // Create viewer
 viewer = pannellum.viewer('panorama', ﻿{
-    "type": "equirectangular",
-    "panorama": "/images/test/spawn4.png",
-    "hotSpots": [
-        {
-            "pitch": 14.1,
-            "yaw": 1.5,
-            "cssClass": "custom-hotspot",
-            "createTooltipFunc": hotspot,
-            "createTooltipArgs": "Baltimore Museum of Art"
-        },
-        {
-            "pitch": -9.4,
-            "yaw": 222.6,
-            "cssClass": "custom-hotspot",
-            "createTooltipFunc": hotspot,
-            "createTooltipArgs": "Art Museum Drive"
-        },
-        {
-            "pitch": -0.9,
-            "yaw": 144.4,
-            "cssClass": "custom-hotspot",
-            "createTooltipFunc": hotspot,
-            "createTooltipArgs": "North Charles Street"
+    "default": {
+        "firstScene": "spawn",
+        "scenefadeDuration": 1000
+    },
+    "scenes": {
+        "spawn": {
+            "type": "equirectangular",
+            "panorama": "/images/test/spawn4.png",
+            "hotSpots": [
+                {
+                    "pitch": 0,
+                    "yaw": 0,
+                    "cssClass": "custom-hotspot",
+                    "createTooltipFunc": hotspot,
+                    "createTooltipArgs": "Click to Continue."
+                    
+                },
+            ]
         }
-    ]
+    }
+
 });
+
 
 // Hot spot creation function
 function hotspot(hotSpotDiv, args) {
