@@ -86,6 +86,7 @@
 viewer = pannellum.viewer('panorama', ﻿{
     "default": {
         "firstScene": "spawn",
+        "autoLoad": true,
         "scenefadeDuration": 1000
     },
     "scenes": {
@@ -131,10 +132,11 @@ viewer = pannellum.viewer('panorama', ﻿{
         "shop": {
             "type": "equirectangular",
             "panorama": "/images/test/shop.png",
+            "yaw": -90,
             "hotSpots": [
                 {
                     "pitch": 0,
-                    "yaw": 0,
+                    "yaw": -90,
                     "cssClass": "tourshop",
                     "createTooltipFunc": hotspot,
                     "createTooltipArgs": "Click to Continue.",
