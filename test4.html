@@ -30,17 +30,52 @@
 
 							<!-- Banner -->
 								<section id="banner">
-									<div class="content">
-										<header>
-											<h1>Welcome to<br />
-											Dog & Co.</h1>
-											<p>Shops Across Dominion.</p>
-										</header>
-										<p>Our selection of shops have any and every item you could ever want. From our first 'Let There be Light!'' shop, to our large selection of stores, our prices and service are some of the best on the server.</p>
-									</div>
-									<span class="image right">
-										<img src="images/D&CLogo.png" alt="" style="width:300px;height:300px;"/>
-									</span>
+									<center>
+                                        <h1>Dog & Co.</h1>
+                                        <h3>
+                                        Search items in Dog & Co stores!
+                                        </h3>
+                                        <b>Search by Item Type, Item, Cost, or Shop:
+                                        <input id="gfg" type="text"
+                                                placeholder="Search here">
+                                        </b>
+                                        <br>
+                                        <br>
+                                        <table>
+                                            <tr>
+                                                <th>Item Type</th>
+                                                <th>Item</th>
+                                                <th>Cost</th>
+                                                <th>Shop</th>
+                                            </tr>
+                                            <tbody id="geeks">
+                                                <tr>
+                                                    <td>Tool</td>
+                                                    <td>Diamond Pick</td>
+                                                    <td>1d</td>
+                                                    <td>Main</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Tooll</td>
+                                                    <td>Diamond Pickk</td>
+                                                    <td>2d</td>
+                                                    <td>Shop</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                
+                                        <script>
+                                            $(document).ready(function() {
+                                                $("#gfg").on("keyup", function() {
+                                                    var value = $(this).val().toLowerCase();
+                                                    $("#geeks tr").filter(function() {
+                                                        $(this).toggle($(this).text()
+                                                        .toLowerCase().indexOf(value) > -1)
+                                                    });
+                                                });
+                                            });
+                                        </script>
+                                    </center>
 								</section>
 						</div>
 					</div>
