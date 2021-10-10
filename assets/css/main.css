@@ -2329,7 +2329,7 @@ table.dataTable thead .sorting_desc_disabled:before {
 .icon-minecraft, .icon-minecraft-sm {
       display: inline-block;
       vertical-align: middle;
-      background-image: url(images/icons-minecraft-0.47.png);
+      background-image: url(icons-minecraft-0.47.png);
       background-repeat: no-repeat;
       background-position: 32px 32px;
       
